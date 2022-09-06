@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+        #ones {
+            margin-top: 150px;
+            border: 2px solid brown;
+            top: 40%;
+            left: 50%;
+            position: absolute;
+            margin-top: -200px;
+            margin-left: -250px;
+            width: 500px;
+            height: 600px;
+            padding: 10px;
+        }
+
+        @media (max-width: 480px) {
+            #two {
+                color: orangered;
+            }
+
+            #ones {
+                border: 2px solid blueviolet;
+                top: 40%;;
+
+                left: 55%;
+
+
+                width: 425px;
+
+
+            }
+        }
+    </style>
+
+</head>
+
+<body class="box1">
+    <div id="ones">
+        <div id="two">
+            <h1>Please Sign Up</h1>
+        </div>
+        <div id="three">
+            <form action="register.html">
+                <div class="input1">
+                    <i class="fa fa-user icon"></i>
+                    <input type="text" name="username" placeholder="UserName" id="uname" required="name" class="inputField" onkeyup="validateName()"> 
+                    <span id="name-error"></span>
+                </div>
+                <div class="input1">
+                    <i class="fa fa-key icon"></i>
+                    <input type="password" name="password" placeholder="Password" required="password"
+                        class="inputField" id="pass" onkeyup="validatePassword()">
+                        <span id="password-error"></span>
+                </div>
+                <div class="input1">
+                    <i class="fa fa-key icon"></i>
+                    <input type="password" name="password" placeholder="CheckPassword" required="password"
+                        class="inputField" id="pass1" onkeyup="validatePassword1()">
+                        <span id="password1-error"></span>
+                </div>
+                <div class="input1">
+                    <i class="fa fa-envelope icon"></i>
+                    <input type="email" name="email" placeholder="email" class="inputField" id="email" onkeyup="validateEmail()">
+                    <span id="email-error" ></span>
+                </div>
+
+                <div class="input1">
+                    <i class="fa fa-calendar icon"></i>
+                    <input type="date" name="dateOfBirth" placeholder="Date Of Birth" class="inputField">
+                    
+                </div>
+
+                <div class="input1">
+                    <i class="fa fa-phone icon"></i>
+                    <input type="tel" name="phone" placeholder="PhoneNumber" pattern="[0-9]{4}-[0-9]{7}"
+                        class="inputField" id="phone" onkeyup="validatePhone()">
+                        <span id="phone-error"> </span>
+                </div>
+                <div class="input1">
+                    <label for="gender">Gender:</label>
+                    <input type="radio" name="gender" value="male">Male
+                    <input type="radio" name="gender" value="male">Female
+                </div>
+                <div class="input1">
+                    <i class='fas fa-city icon'></i>
+                    <select name="city" class="inputField">
+                        <option value="karachi">Karachi</option>
+                        <option value="islamabad">Islamabad</option>
+                        <option value="lahore">Lahore</option>
+                        <option value="Multan">Multan</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn">Registration</button>
+
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
